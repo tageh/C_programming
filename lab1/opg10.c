@@ -17,9 +17,9 @@ int main(){
     usd = sum * 0.11;
 
     if(svar == 1)
-        printf("%fusd tilsvarer %fnok\n", sum,nok);
+        printf("%.2fusd tilsvarer %.2fnok\n", sum,nok);
     else
-        printf("%fnok tilsvarer %fusd\n", sum, usd);
+        printf("%.2fnok tilsvarer %.2fusd\n", sum, usd);
     
     return 0;
 }
