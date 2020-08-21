@@ -13,13 +13,13 @@ int main(){
     printf("hvor mye ønsker du og konvertere? ");
     scanf("%f", &sum);
 
-    nok = sum * 8.94;
-    usd = sum * 0.11;
-
-    if(svar == 1)
+    if(svar == 1){
+        nok = sum * 8.94;
         printf("%.2fusd tilsvarer %.2fnok\n", sum,nok);
-    else
+    }   
+    else{
+        usd = sum * 0.11;
         printf("%.2fnok tilsvarer %.2fusd\n", sum, usd);
-    
+    }
     return 0;
 }
