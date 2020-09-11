@@ -38,7 +38,9 @@ void trekk(int arr[]){
 void skrivUt(int arr[], int count){
     int i;
     printf("%d :", count + 1);
+    
     for(i = 0; i<7; i++){
+        if(arr[i]<10) printf("0");
         printf("%d ",(arr[i]));
     }
 }
