@@ -7,7 +7,7 @@ int main(){
     int space = n-1;
 
     for(int i = 0; i<n; i++){
-        for(int l = 0; l<space;l++){
+        for(int l = 0; l<space+1;l++){
             printf(" ");
         }
     

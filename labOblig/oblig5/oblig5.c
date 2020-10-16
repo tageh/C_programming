@@ -21,7 +21,7 @@ int diamant(int n);
             printf(" "); 
   
         for (int j = 1; j<=i; j++){
-            printf(" Tabita"); 
+            printf(" %d",i); 
         }
         printf("\n"); 
         space--; 
@@ -36,7 +36,7 @@ int diamant(int n);
             printf(" "); 
 
         for (int j = 1;j <=i;j++) 
-            printf("Tabita "); 
+            printf("%d ",i); 
   
         printf("\n"); 
         space++; 
