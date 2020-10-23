@@ -14,13 +14,13 @@ int skrivTilFil(int arr[], int count, FILE *f);
 
 int main(){
     FILE *f;
-    f = fopen("Lotto.txt", "a ");
+    f = fopen("Lotto.txt", "w");
 
     int j;
     char svar[3];
     int rekker = lesInn();
     int arrTall[7];
-    int teller;
+    int teller = 0;
 
     srand(time(0));
     int n = sizeof(arrTall)/sizeof(arrTall[0]); 
@@ -37,16 +37,20 @@ int main(){
         
         if(strcmp(svar,"ja") == 0){
             skrivTilFil(arrTall, j, f);
-            if(j == 9){
-                printf("\n\n");
+            if(teller == 10){
+                printf("\n");
+                //fprintf(f, "\n");
+                teller = 0;
             }
         }else{
             printf("Lagrer ikke til fil\n");
         }
 
-        if(teller == 10){
-            fprintf(f, "\n\n");
-        }
+        /*if(teller == 10){
+            fprintf(f, "\n1:");
+            printf("\n");
+            teller = 0;
+        }*/
     }
     return 0;
 }
@@ -114,16 +118,16 @@ void selectionSort(int arr[], int n) {
 } 
 
 int skrivTilFil(int arr[], int count, FILE *f){
-    //FILE *f;
-    //f = fopen("Lotto.txt", "a ");
+    f = fopen("Lotto.txt", "a");
     if(f == NULL){
         printf("Kunne ikke lagre");
     }else{
         fprintf(f,"%d: ", count + 1);
         for(int i = 0; i<7; i++){
+            if(arr[i]<10) fprintf(f, "0");
             fprintf(f, "%d ",(arr[i]));
-            }
         }
         fprintf(f,"\r");
         fclose(f);
-    }
+    }  
+}
