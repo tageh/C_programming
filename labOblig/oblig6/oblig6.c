@@ -37,20 +37,13 @@ int main(){
         
         if(strcmp(svar,"ja") == 0){
             skrivTilFil(arrTall, j, f);
-            if(teller == 10){
-                printf("\n");
-                //fprintf(f, "\n");
-                teller = 0;
-            }
         }else{
             printf("Lagrer ikke til fil\n");
         }
 
-        /*if(teller == 10){
-            fprintf(f, "\n1:");
+        if((j +1) % 10 == 0){
             printf("\n");
-            teller = 0;
-        }*/
+        }
     }
     return 0;
 }
@@ -120,12 +113,17 @@ void selectionSort(int arr[], int n) {
 int skrivTilFil(int arr[], int count, FILE *f){
     f = fopen("Lotto.txt", "a");
     if(f == NULL){
-        printf("Kunne ikke lagre");
+        perror("Kunne ikke lagre");
+        return 0;
     }else{
         fprintf(f,"%d: ", count + 1);
         for(int i = 0; i<7; i++){
             if(arr[i]<10) fprintf(f, "0");
             fprintf(f, "%d ",(arr[i]));
+        }
+
+        if((count +1) % 10 == 0){
+            fprintf(f, "\n");
         }
         fprintf(f,"\r");
         fclose(f);
