@@ -20,7 +20,7 @@ int main(){
     char svar[3];
     int rekker = lesInn();
     int arrTall[7];
-    int teller = 0;
+    
 
     srand(time(0));
     int n = sizeof(arrTall)/sizeof(arrTall[0]); 
@@ -29,7 +29,6 @@ int main(){
     scanf("%s", svar);
 
     for(j = 0; j <rekker; j++){
-        teller +=1;
         trekk(arrTall);
         printf("\n");
         selectionSort(arrTall, n); 
