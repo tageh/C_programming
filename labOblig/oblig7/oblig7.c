@@ -28,7 +28,6 @@ int bitAND(int num1, int num2){
   return num1 & num2;
 }
 
-
 void skrivUtBit(int num){  
    int i,j;
 
@@ -45,37 +44,3 @@ void skrivUtBit(int num){
   printf("\n");
 
 }
-
-
-/*
-
-  int i,j,c,k;
-
-    printf("%d i binary er: ", num1);
-    for (c = 31; c >= 0; c--)
-  {
-    i = num1>> c;
-
-    if (i & 1)
-      printf("1");
-    else
-      printf("0");
-  }
-
-    printf("\n");
-
-    printf("%d i binary er: ", num2);
-    for (j = 31; j >= 0; j--)
-  {
-    k = num2 >> j;
-
-    if (k & 1)
-      printf("1");
-    else
-      printf("0");
-  }
-
-  printf("\n");
-*/
-
-  
