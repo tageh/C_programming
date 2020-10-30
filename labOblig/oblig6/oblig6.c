@@ -116,7 +116,7 @@ int skrivTilFil(int arr[], int count, FILE *f){
         return 0;
     }else{
         fprintf(f,"%d: ", count + 1);
-        for(int i = 0; i<7; i++){
+        for(int i = 0; i<7; i++){   
             if(arr[i]<10) fprintf(f, "0");
             fprintf(f, "%d ",(arr[i]));
         }
