@@ -11,7 +11,7 @@ int main(){
     int num1 = lesInnTall(); int num2 = lesInnTall();
     printf("%d er i binary er: ",num1); skrivUtBit(num1);
     printf("%d er i binary er: ",num2); skrivUtBit(num2);
-    printf("%d andet er i binary: ", bitAND(num1,num2));skrivUtBit(bitAND(num1, num2));
+    printf("%d andet er i binary: ", bitAND(num1,num2)); skrivUtBit(bitAND(num1, num2));
 
     return 0;
 }
