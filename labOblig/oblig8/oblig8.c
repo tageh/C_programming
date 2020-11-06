@@ -31,8 +31,8 @@ void oppstartsTekst(void){
 float lesInnRadius(void){
     float radius;
     printf("Skriv inn en radius: ");
-	scanf("%f", &radius);
-	return radius;
+    scanf("%f", &radius);
+    return radius;
 }
 
 float regnUtOverflate(float radius){
